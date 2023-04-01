@@ -1,0 +1,297 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Raleway:wght@200&family=Tilt+Neon&family=Ubuntu:ital,wght@1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&family=Mulish&family=Raleway:wght@200&family=Tilt+Neon&family=Ubuntu:ital,wght@1,300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*PARTE ICONOS*/
+#facebook{
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+}
+#youtube{
+    color: red;
+    transition: all 0.3s ease 0s;
+}
+#tiktok{
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+#twitter{
+    color: rgb(38, 230, 247);
+    transition: all 0.3s ease 0s;
+}
+#twitch{
+    color: rgb(156, 68, 239);
+    transition: all 0.3s ease 0s;
+}
+#instagram{
+    color: rgb(244, 138, 0);
+    transition: all 0.3s ease 0s;
+}
+#facebook:hover,
+#youtube:hover,
+#tiktok:hover,
+#twitter:hover,
+#twitch:hover,
+#instagram:hover
+{
+    transform: scale(1.2);
+}
+
+
+
+
+.header{
+    /* background-color: rgb(18, 17, 17, 0.95); */
+    
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 2px 6%;
+    z-index: 1000000;
+    /* border-bottom: rgb(176, 221, 251) 2px solid; */
+    margin-bottom: 20px;
+
+}
+/* para que muestre la manito al rotar el mouse por la imagen */
+.header .logo{
+    cursor: pointer;
+    /* margin-right: auto; */
+    
+
+}
+
+/*Altura de height y el widht para qu ese ponga automatico y no salga */
+.header .logo img{
+    
+    height: 65px;
+    width: 100%;
+    transition: all 0.6s;
+
+}
+
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+
+.header .nav-links{
+    list-style: none;
+}
+.link-redes{
+    list-style: none;
+    display: flex;
+    
+    
+}
+.link-ico{
+    margin-right: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0px 20px;
+    margin-top: 10px;
+}
+.header .nav-links li:hover,
+.overlay a:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+/*animadp*/
+
+.header .nav-links a:after{
+    content: "";
+    width: 0;
+    background-color: rgb(100, 19, 231);
+    height: 4px;
+    bottom: 0;
+    position: absolute;
+    right: 50%;
+    transition: all .5s;
+    will-change: width;
+}
+
+
+
+
+
+.header .nav-links li a:hover:after{
+    width: 100%;
+    right: 0;
+}
+.header .menu .menuGa{
+    width:  80px;
+    transition: all 0.3s ease 0s;
+    border-radius: 40px;
+}
+.header .btn button{
+    margin-left: 9px;
+    font-weight: 22px;
+    color: rgb(255, 255, 255);
+    padding: 5px 25px;
+    background: rgb(30, 133, 230);
+    border: none;
+    border-radius:50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+.menu{
+    display: none;
+}
+.header .menu .menuGa:hover{
+    transform: scale(1.1);
+}
+
+.header .btn button:hover{
+    background-color: rgb(5, 176, 215);
+    color: rgb(219, 200, 200);
+    transform: scale(1.1);
+}
+
+
+
+/* Esto sera para el responsible nav */
+
+.header a{
+    text-decoration: none;
+}
+
+.header .overlay{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: rgba(67, 12, 58, 0.95) ;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.header .overlay .overlay-content{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .overlay a{
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    color: rgb(134, 32, 32) ;
+}
+
+.header .overlay a:hover,
+.header .overlay a:focus{
+    color: pink;
+}
+.header .overlay .close{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 65px;
+
+}
+.imgcentro{
+    width: 100%;
+}
+
+
+#zonarata{
+    background: url(/img/menu.png);
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.FotoParamo{
+    width: 100%;
+
+}
+
+.zonaT{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 58px;
+}
+.zonaA{
+    font-size: 19px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* Media para responsive */
+@media screen and (max-width: 811px) {
+    
+    .zonaT{
+        font-size: 60px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .nav-links, .btn{
+        display: none;
+    }    
+    .menu{
+        display: inherit;
+    }
+}
+@media screen and (max-width:450px) {
+    .zonaT{
+        font-size: 38px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .header .overlay a{
+        font-size: 20px;
+    }
+    .header .overlay .close{
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+
+
+/*  DIMENSIONES 600A X 700B
+
+
+VAMOS CON EL DE 600A
+
+@media (max-width:600px){
+    body{
+        background-color: black;
+    }
+
+}
+
+
+--Este es mayor o igual a 600
+@media (min-width:600px){
+    body{
+        background-color: blue;
+    }
+
+}
+*/
+
